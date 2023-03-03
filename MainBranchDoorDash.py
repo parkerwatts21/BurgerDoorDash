@@ -1,4 +1,4 @@
-# Caroline Conley, Jack Kelly, Matt Beckstrand, Parker Watts, Baylee El-Bakri, and Adam Trommlitz
+# Caroline Conley, Jack Kelly, Matt Beckstrand, Parker Watts, Baylee El-Bakri, and Adam Trommlitz (Team-13)
 # Description: Create a program that simulates an owner of a hamburger restaurant. 
 # This program will track and print exactly how many hamburgers each customer eats by creating a queue and using a dictionary
 
