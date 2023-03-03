@@ -37,17 +37,22 @@ queueCustomers = []
 
 dictCustomers = {}
 
-# 
+# Prompt the user for amount of customers in the queue (100 for the assignment)
 
 iNumCustomers = int(input("How many customers are in the queue? "))
+
+# Clarify list by making constant variables for position 0 and 1 for customer and burgerorder
 
 CUSTOMER = 0
 BURGERORDER = 1
 
-# CustomerLine
+# Create a loop to load the customer objects in the queue (list)
 
 for iCount in range (1, iNumCustomers + 1) :
     queueCustomers.append(Customer())
+
+# Create a loop to keep track of burger count for customers by transfering information into dictionary and removing them from queue
+# If the name isn't already in the dictionary add name and burger count.
 
 for iQueue in range(0, len(queueCustomers)) :
     if queueCustomers[0].customer_name in dictCustomers :
@@ -60,7 +65,12 @@ for iQueue in range(0, len(queueCustomers)) :
 
 print("\n")
 
+# Convert the dictionary into a sorted list that is sorted by the most number of burgers order
+
 listSortedCustomers = sorted(dictCustomers.items(),key=lambda x: x[1], reverse=True)
+
+# Print out list using loop and constant variables that we set before
+# We used ljust 25 instead of 19 to make the display look better
 
 for iPrCount in range(0, len(listSortedCustomers)) :
         print(listSortedCustomers[iPrCount][CUSTOMER].ljust(25) + str(listSortedCustomers[iPrCount][BURGERORDER]))
